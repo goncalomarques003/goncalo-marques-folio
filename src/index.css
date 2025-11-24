@@ -14,12 +14,12 @@ All colors MUST be HSL.
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
 
-    /* White cards with black text */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    /* Dark cards with white text (corporate/dark theme) */
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 100%;
 
     /* Sophisticated blue accent for CTAs */
     --primary: 217 91% 60%;
@@ -50,9 +50,9 @@ All colors MUST be HSL.
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* Shadows for white cards */
-    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-card-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    /* Shadows for dark cards - subtle dark shadow for depth effect */
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 5% / 0.5), 0 2px 4px -2px hsl(0 0% 5% / 0.5);
+    --shadow-card-hover: 0 10px 15px -3px hsl(0 0% 5% / 0.5), 0 4px 6px -4px hsl(0 0% 5% / 0.5);
   }
 }
 

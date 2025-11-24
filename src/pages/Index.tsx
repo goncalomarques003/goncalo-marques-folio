@@ -61,7 +61,7 @@ const Index = () => {
       location: "Madrid, Spain",
       dates: "Sep 2025 – Jul 2026",
       description:
-        "I am enrolled in the MSc in Management with a specialization in Innovation Management, where I work on case studies and strategic problems with companies across sectors such as retail and technology. The program deepens my understanding of how leading companies design strategy, manage innovation, and make data-driven decisions. Key topics include Strategy, Innovation Management, Entrepreneurship, and Finance.",
+        "I am enrolled in the MSc in Management with a specialization in Innovation Management, where I work on case studies and strategic problems with companies across sectors suchs as retail and technology. The program deepens my understanding of how leading companies design strategy, manage innovation, and make data-driven decisions. Key topics include Strategy, Innovation Management, Entrepreneurship, and Finance.",
     },
     {
       institution: "Faculdade de Economia da Universidade do Porto (FEP)",
@@ -139,9 +139,12 @@ const Index = () => {
               join.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gap-2">
-                <Download className="w-5 h-5" />
-                Download CV
+              {/* MODIFIED: Added asChild, href, and download attributes */}
+              <Button asChild size="lg" className="gap-2">
+                <a href="/CV_Goncalo_Marques.pdf" download>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </a>
               </Button>
               <Button size="lg" variant="outline" className="gap-2">
                 <Mail className="w-5 h-5" />

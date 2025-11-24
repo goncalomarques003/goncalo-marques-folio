@@ -11,7 +11,8 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-card-foreground bg-card text-card-foreground hover:bg-card-foreground hover:text-card",
+        // Modified: Removed hover:bg-card-foreground (white) to fix the "white box" flash on hover for dark theme.
+        outline: "border border-border bg-card text-card-foreground hover:bg-secondary hover:text-secondary-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",

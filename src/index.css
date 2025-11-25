@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,49 +10,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Pure black background with white text */
+    /* Pure black background (#000000) */
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
 
-    /* Dark cards with white text (corporate/dark theme) */
-    --card: 0 0% 12%;
+    /* Transparent glassy cards with glowing white borders */
+    --card: 0 0% 100% / 0.05;
     --card-foreground: 0 0% 100%;
+    --card-border: 0 0% 100% / 0.2;
+    --card-glow: 0 0% 100% / 0.3;
 
-    --popover: 0 0% 12%;
+    --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
 
-    /* Sophisticated blue accent for CTAs */
+    /* Premium blue accent */
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - subtle gray for less emphasis */
+    /* Secondary */
     --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted - for subtle backgrounds and muted text */
+    /* Muted */
     --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 60%;
+    --muted-foreground: 0 0% 65%;
 
-    /* Accent - gold for special highlights */
-    --accent: 45 100% 51%;
+    /* Accent - white glow */
+    --accent: 0 0% 100%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders - very subtle on black */
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
+    /* Borders */
+    --border: 0 0% 100% / 0.15;
+    --input: 0 0% 100% / 0.15;
     --ring: 217 91% 60%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* Shadows for dark cards - subtle dark shadow for depth effect */
-    --shadow-card: 0 4px 6px -1px hsl(0 0% 5% / 0.5), 0 2px 4px -2px hsl(0 0% 5% / 0.5);
-    --shadow-card-hover: 0 10px 15px -3px hsl(0 0% 5% / 0.5), 0 4px 6px -4px hsl(0 0% 5% / 0.5);
+    /* Glowing shadows */
+    --shadow-card: 0 0 20px hsl(0 0% 100% / 0.1), 0 4px 12px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 0 30px hsl(0 0% 100% / 0.2), 0 8px 24px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
   }
 }
 
@@ -62,12 +65,14 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Space Grotesk', sans-serif;
     font-feature-settings: 'kern' 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
   }
 }
 

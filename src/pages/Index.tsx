@@ -76,6 +76,12 @@ const Index = () => {
                 {t.hero.downloadCV}
               </a>
             </Button>
+            <Button asChild size="lg" className="gap-2 shadow-glow">
+              <a href="https://www.linkedin.com/in/goncalocarinhasmarques/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5" />
+                LinkedIn
+              </a>
+            </Button>
             <Button asChild size="lg" variant="outline" className="gap-2">
               <a href="#contact">
                 <Mail className="w-5 h-5" />
